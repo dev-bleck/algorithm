@@ -3,10 +3,10 @@ sys.stdin = open('sample_input.txt')
 
 # 중위 순회
 def inorder(tree, node):
-    global count    # 시작값
+    global cnt    # 시작값
     if node <= N:   # N보다 크거나 같으면,
         inorder(tree, node * 2)        # 서브 트리의 왼쪽 자식 노드
-        tree[node] = count             # 서브 트리의 루트 노드
+        tree[node] = cnt             # 서브 트리의 루트 노드
         cnt += 1                       # 값 1 증가
         inorder(tree, node * 2 + 1)    # 서브 트리의 오른쪽 자식 노드
 
