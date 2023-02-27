@@ -1,0 +1,16 @@
+(1)
+def inoder(v):
+    if v <= N:  # 정점의 개수 N보다 작을 때 실행.
+        # v.left 계산을 위한 재귀 호출인 inoder(v * 2)는 호출되었을 때 새로운 subtree의
+        # root 정점이 되고, 이 root 정점을 기준으로 새롭게 v.left가 생성된다. v가 N보다 크거나 같을 때까지 반복된다.
+        inoder(v * 2) # v.left 계산을 위한 재귀 호출.
+        # v.left의 재귀 호출이 완료될 때마다 방문한 정점의 이름이 출력된다.
+        # 중위 순회이기 때문에, 처리해야 하는 작업은 아래 위치의 print문에서 이루어진다.
+        print(v)  # 방문한 정점의 이름을 출력.
+        # inoder(v * 2 + 1) 또한 호출되었을 때 새로운 subtree의
+        # root 정점이 되고, 이 root 정점을 기준으로 새롭게 v.right가 생성되고, v가 N보다 크거나 같을 때까지 반복된다.
+        inoder(v * 2 + 1)  # v.right 계산을 위한 재귀 호출.
+
+(2)
+중위 순회 B A D C E
+후위 순회 B D E C A
