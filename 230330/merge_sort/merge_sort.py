@@ -29,6 +29,7 @@ def merge_sort(numbers):
     if right_idx < len(right_numbers):
         numbers[k:] = right_numbers[right_idx:]
 
+    # 교수님이 정한 추가 조건
     if left_numbers[-1] > right_numbers[-1]:
         answer += 1
 
