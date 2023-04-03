@@ -37,6 +37,7 @@ for test_case in range(1, T + 1):
 
     result = []
     print(powerset)
+    # find_set을 돌면 왜 5가 1로 바뀌는가?
     for e in powerset:
         result.append(find_set(e))
         print(result)
