@@ -7,7 +7,6 @@ for test_case in range(1, T + 1):
     N, M = map(int, input().split())
     arr = list(map(int, input().split()))
 
-    # 서로소 집합 표현 리스트
     powerset = [0 for _ in range(N + 1)]
 
 
@@ -38,6 +37,9 @@ for test_case in range(1, T + 1):
     result = []
     print(powerset)
     # find_set을 돌면 왜 5가 1로 바뀌는가?
+    # find_set은 대표 원소(루트 노드)를 반환하는 함수.
+    # 6의 자리에 있는 대표 원소 5를 find_set으로 연산하면,
+    # 5의 자리에 있는 대표 원소 1을 return 하기 때문.
     for e in powerset:
         result.append(find_set(e))
         print(result)
