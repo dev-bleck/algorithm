@@ -1,0 +1,1 @@
+print(int('0x' + ''.join(list(input().lower())), 16))
